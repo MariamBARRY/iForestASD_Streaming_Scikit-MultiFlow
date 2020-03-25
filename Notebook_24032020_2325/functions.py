@@ -17,33 +17,33 @@ class Comparison:
   #with differents values for parameters
   def run_comparison(self, stream, stream_n_features, window = 100, 
                      estimators = 50, anomaly = 0.5, drift_rate = 0.3, 
-                     result_folder="Generated"):
+                     result_folder="Generated", max_sample=100000, n_wait=200,
+                     metrics=['accuracy', 'f1', 'kappa', 'kappa_m', 
+                              'running_time','model_size']):
     
     from skmultiflow.anomaly_detection import HalfSpaceTrees
     from iforestasd_scikitmultiflow import IsolationForestStream
     from skmultiflow.evaluation.evaluate_prequential import EvaluatePrequential
     
+    # Creation f the result csv
     directory_path = 'results/'+str(result_folder)
     self.check_directory(path=directory_path)
     result_file_path = directory_path+'/result_for_WS'+str(window)+'_NE'+str(estimators)+'.csv'
     
     # 2. Prepare for use This function is usefull to have data window by window
-    stream.prepare_for_use() # Deprecated so how to prepare data?
+    # stream.prepare_for_use() # Deprecated so how to prepare data?
     
     models = [HalfSpaceTrees(n_features=stream_n_features, window_size=window, 
-                             n_estimators=estimators, size_limit=0.1*100, 
-                             anomaly_threshold=anomaly, depth=15, 
-                             random_state=2),
+                             n_estimators=estimators, anomaly_threshold=anomaly),
+    #IForest ASD use all the window_size for the sample in the training phase
     IsolationForestStream(window_size=window, n_estimators=estimators, 
-                          anomaly_threshold=anomaly, drift_threshold=drift_rate, 
-                          random_state=None)]
+                          anomaly_threshold=anomaly, drift_threshold=drift_rate)]
     # Setup the evaluator
-    evaluator = EvaluatePrequential(pretrain_size=1, max_samples=1000, 
+    evaluator = EvaluatePrequential(pretrain_size=1, max_samples=max_sample, 
                                     show_plot=True, 
-                                    metrics=['accuracy', 'f1', 'kappa', 'kappa_m', 
-                                             'running_time','model_size'], 
-                                             batch_size=1, 
-                                             output_file = result_file_path) 
+                                    metrics=metrics, batch_size=1, 
+                                    output_file = result_file_path,
+                                    n_wait = n_wait) 
     # 4. Run the evaluation 
     evaluator.evaluate(stream=stream, model=models, model_names=['HSTrees','iForestASD'])
     print("")
@@ -52,6 +52,13 @@ class Comparison:
   
   def get_dataset(self, dataset_name="Generator", classification_function=0, 
                   noise_percentage=0.7, random_state=1):
+      #Dataset
+      #  Name M(#instances) N(#attributes) Anomaly
+      #  Threshold
+      #  Http 567498 3 0.39%
+      #  Smtp 95156 3 0.03%
+      #  ForestCover 286048 10 0.96%
+      #  Shuttle 49097 9 7.15%
       if dataset_name=="Generator":
          return self.get_data_generated(classification_function, 
                                         noise_percentage, random_state);
