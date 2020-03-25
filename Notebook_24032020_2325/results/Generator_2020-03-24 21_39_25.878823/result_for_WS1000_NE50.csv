@@ -1,0 +1,12 @@
+# TEST CONFIGURATION BEGIN
+# SEAGenerator(balance_classes=False, classification_function=0, noise_percentage=0.7, random_state=1)
+# [HSTrees] HalfSpaceTrees(anomaly_threshold=0.5, depth=15, n_estimators=50, n_features=3, random_state=2, size_limit=10.0, window_size=1000)
+# [iForestASD] IsolationForestStream(anomaly_threshold=0.5, drift_threshold=0.3, n_estimators=50, random_state=None, window_size=1000)
+# EvaluatePrequential(batch_size=1, data_points_for_classification=False, max_samples=1000, max_time=inf, metrics=['accuracy', 'f1', 'kappa', 'kappa_m', 'running_time', 'model_size'], n_wait=200, output_file='results/Generator_2020-03-24 ' '21:39:25.878823/result_for_WS1000_NE50.csv', pretrain_size=1, restart_stream=True, show_plot=True)
+# TEST CONFIGURATION END
+id,mean_acc_[HSTrees],current_acc_[HSTrees],mean_acc_[iForestASD],current_acc_[iForestASD],mean_f1_[HSTrees],current_f1_[HSTrees],mean_f1_[iForestASD],current_f1_[iForestASD],mean_kappa_[HSTrees],current_kappa_[HSTrees],mean_kappa_[iForestASD],current_kappa_[iForestASD],mean_kappa_m_[HSTrees],current_kappa_m_[HSTrees],mean_kappa_m_[iForestASD],current_kappa_m_[iForestASD],training_time_[HSTrees],testing_time_[HSTrees],total_running_time_[HSTrees],training_time_[iForestASD],testing_time_[iForestASD],total_running_time_[iForestASD],model_size_[HSTrees],model_size_[iForestASD]
+199,0.567839,0.567839,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,-0.102564,-0.102564,-1.551282,-1.551282,10.811048,0.162461,10.973509,0.003546,0.000383,0.003929,377604.991211,42.801758
+399,0.561404,0.555000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,-0.047904,0.000000,-1.389222,-1.247191,10.909770,0.326793,11.236563,0.007611,0.000805,0.008416,377618.143555,83.239258
+599,0.537563,0.490000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,-0.029740,-0.073684,-1.226766,-1.105263,11.001506,0.478814,11.480320,0.011903,0.001198,0.013101,377626.264648,123.208008
+799,0.540676,0.550000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,-0.022284,-0.034483,-1.225627,-1.298851,11.097625,0.629943,11.727568,0.016081,0.001612,0.017692,377627.440430,163.551758
+999,0.542543,0.550000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,-0.017817,0.000000,-1.224944,-1.222222,11.191736,0.782875,11.974611,0.020563,0.002019,0.022582,377628.479492,203.395508
