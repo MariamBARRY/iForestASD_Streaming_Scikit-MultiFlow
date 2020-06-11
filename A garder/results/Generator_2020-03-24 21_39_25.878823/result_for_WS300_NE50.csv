@@ -1,0 +1,12 @@
+# TEST CONFIGURATION BEGIN
+# SEAGenerator(balance_classes=False, classification_function=0, noise_percentage=0.7, random_state=1)
+# [HSTrees] HalfSpaceTrees(anomaly_threshold=0.5, depth=15, n_estimators=50, n_features=3, random_state=2, size_limit=10.0, window_size=300)
+# [iForestASD] IsolationForestStream(anomaly_threshold=0.5, drift_threshold=0.3, n_estimators=50, random_state=None, window_size=300)
+# EvaluatePrequential(batch_size=1, data_points_for_classification=False, max_samples=1000, max_time=inf, metrics=['accuracy', 'f1', 'kappa', 'kappa_m', 'running_time', 'model_size'], n_wait=200, output_file='results/Generator_2020-03-24 ' '21:39:25.878823/result_for_WS300_NE50.csv', pretrain_size=1, restart_stream=True, show_plot=True)
+# TEST CONFIGURATION END
+id,mean_acc_[HSTrees],current_acc_[HSTrees],mean_acc_[iForestASD],current_acc_[iForestASD],mean_f1_[HSTrees],current_f1_[HSTrees],mean_f1_[iForestASD],current_f1_[iForestASD],mean_kappa_[HSTrees],current_kappa_[HSTrees],mean_kappa_[iForestASD],current_kappa_[iForestASD],mean_kappa_m_[HSTrees],current_kappa_m_[HSTrees],mean_kappa_m_[iForestASD],current_kappa_m_[iForestASD],training_time_[HSTrees],testing_time_[HSTrees],total_running_time_[HSTrees],training_time_[iForestASD],testing_time_[iForestASD],total_running_time_[iForestASD],model_size_[HSTrees],model_size_[iForestASD]
+199,0.567839,0.567839,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,-0.102564,-0.102564,-1.551282,-1.551282,10.996959,0.166006,11.162965,0.003510,0.000381,0.003891,377604.991211,43.083008
+399,0.561404,0.555000,0.122807,0.245000,0.358974,0.524064,0.168684,0.281134,0.064347,0.108038,-0.007983,-0.017075,-0.047904,0.000000,-1.095808,-0.696629,11.680483,0.331456,12.011939,0.243334,10.748730,10.992064,377603.760742,2644.610352
+599,0.544240,0.510000,0.262104,0.540000,0.525217,0.675497,0.307115,0.478136,0.088138,0.000000,0.010317,0.083665,-0.014870,-0.031579,-0.643123,0.031579,11.789879,0.494581,12.284460,0.247053,41.365698,41.612751,377608.709961,2724.704102
+799,0.574468,0.665000,0.336671,0.560000,0.547872,0.621469,0.361247,0.481294,0.146416,0.321175,0.025314,0.090909,0.052925,0.229885,-0.476323,-0.011494,12.498832,0.763907,13.262739,0.582033,90.076806,90.658838,377610.323242,5233.469727
+999,0.575576,0.580000,0.379379,0.550000,0.544086,0.528090,0.387221,0.470367,0.147302,0.149798,0.032170,0.068323,0.055679,0.066667,-0.380846,0.000000,13.208762,1.035504,14.244266,1.011443,155.290638,156.302080,377609.284180,7730.461914

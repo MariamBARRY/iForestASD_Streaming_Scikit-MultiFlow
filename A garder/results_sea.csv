@@ -1,0 +1,12 @@
+# TEST CONFIGURATION BEGIN;;;;;;;;;;;;;;;;
+# SEAGenerator(balance_classes=False; classification_function=0; noise_percentage=0.7; random_state=1);;;;;;;;;;;;;
+# [HSTrees] HalfSpaceTrees(anomaly_threshold=0.9; depth=15; n_estimators=50; n_features=3; random_state=5; size_limit=10.0; window_size=10);;;;;;;;;;
+# [iForestASD] IsolationForestStream(anomaly_threshold=0.5; drift_threshold=0.1; n_estimators=50; random_state=None; window_size=10);;;;;;;;;;;;
+# EvaluatePrequential(batch_size=1; data_points_for_classification=False; max_samples=1000; max_time=inf; metrics=['accuracy'; 'f1'; 'kappa'; 'kappa_m']; n_wait=200; output_file='results_sea.csv'; pretrain_size=1; restart_stream=True; show_plot=True);;;;
+# TEST CONFIGURATION END;;;;;;;;;;;;;;;;
+id;mean_acc_[HSTrees];current_acc_[HSTrees];mean_acc_[iForestASD];current_acc_[iForestASD];mean_f1_[HSTrees];current_f1_[HSTrees];mean_f1_[iForestASD];current_f1_[iForestASD];mean_kappa_[HSTrees];current_kappa_[HSTrees];mean_kappa_[iForestASD];current_kappa_[iForestASD];mean_kappa_m_[HSTrees];current_kappa_m_[HSTrees];mean_kappa_m_[iForestASD];current_kappa_m_[iForestASD]
+199;0.437186;0.437186;0.422111;0.422111;0.591241;0.591241;0.355617;0.355617;-0.004416;-0.004416;-0.005801;-0.005801;-0.435897;-0.435897;-0.474359;-0.474359
+399;0.441103;0.445000;0.438596;0.455000;0.603908;0.615917;0.363083;0.370331;-0.001576;0.000000;-0.005671;-0.005906;-0.335329;-0.247191;-0.341317;-0.224719
+599;0.464107;0.510000;0.467446;0.525000;0.628902;0.675497;0.379667;0.412342;0.000541;0.000000;0.007129;0.035533;-0.193309;-0.031579;-0.185874;0.000000
+799;0.460576;0.450000;0.471840;0.485000;0.626840;0.620690;0.384745;0.399976;0.000244;0.000000;0.016194;0.043640;-0.200557;-0.264368;-0.175487;-0.183908
+999;0.458458;0.450000;0.469469;0.460000;0.625606;0.620690;0.384441;0.382805;0.000118;0.000000;0.010924;-0.011236;-0.204900;-0.222222;-0.180401;-0.200000

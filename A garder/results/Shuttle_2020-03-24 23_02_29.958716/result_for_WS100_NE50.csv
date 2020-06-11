@@ -1,0 +1,12 @@
+# TEST CONFIGURATION BEGIN
+# FileStream(filename='Shuttle.csv', target_idx=-1, n_targets=1, cat_features=None)
+# [HSTrees] HalfSpaceTrees(anomaly_threshold=0.5, depth=15, n_estimators=50, n_features=9, random_state=2, size_limit=10.0, window_size=100)
+# [iForestASD] IsolationForestStream(anomaly_threshold=0.5, drift_threshold=0.3, n_estimators=50, random_state=None, window_size=100)
+# EvaluatePrequential(batch_size=1, data_points_for_classification=False, max_samples=1000, max_time=inf, metrics=['accuracy', 'f1', 'kappa', 'kappa_m', 'running_time', 'model_size'], n_wait=200, output_file='results/Shuttle_2020-03-24 ' '23:02:29.958716/result_for_WS100_NE50.csv', pretrain_size=1, restart_stream=True, show_plot=True)
+# TEST CONFIGURATION END
+id,mean_acc_[HSTrees],current_acc_[HSTrees],mean_acc_[iForestASD],current_acc_[iForestASD],mean_f1_[HSTrees],current_f1_[HSTrees],mean_f1_[iForestASD],current_f1_[iForestASD],mean_kappa_[HSTrees],current_kappa_[HSTrees],mean_kappa_[iForestASD],current_kappa_[iForestASD],mean_kappa_m_[HSTrees],current_kappa_m_[HSTrees],mean_kappa_m_[iForestASD],current_kappa_m_[iForestASD],training_time_[HSTrees],testing_time_[HSTrees],total_running_time_[HSTrees],training_time_[iForestASD],testing_time_[iForestASD],total_running_time_[iForestASD],model_size_[HSTrees],model_size_[iForestASD]
+199,0.502513,0.502513,0.457286,0.457286,0.123894,0.123894,0.490414,0.490414,-0.007878,-0.007878,0.101505,0.101505,-5.600000,-5.600000,-6.200000,-6.200000,12.007846,0.150581,12.158427,0.143126,14.785947,14.929073,377604.252930,740.727539
+399,0.370927,0.240000,0.684211,0.910000,0.154882,0.173913,0.620974,0.712086,0.013728,0.023199,0.233020,0.594503,-6.843750,-7.941176,-2.937500,-0.058824,13.493775,0.554644,14.048419,0.724870,87.777110,88.501980,377604.690430,1840.032227
+599,0.333890,0.260000,0.762938,0.920000,0.170478,0.195652,0.667205,0.742215,0.021526,0.030462,0.328136,0.662091,-6.823529,-6.789474,-1.784314,0.157895,14.969551,0.960815,15.930366,1.684544,218.611542,220.296086,377604.608398,2955.375977
+799,0.260325,0.040000,0.806008,0.935000,0.139738,0.067961,0.672481,0.671179,0.007858,0.000364,0.350887,0.492188,-9.189655,-26.428571,-1.672414,-0.857143,16.422765,1.366345,17.789110,3.013109,406.201619,409.214728,377604.581055,4124.383789
+999,0.253253,0.225000,0.830831,0.930000,0.150342,0.188482,0.690380,0.751571,0.013194,0.030402,0.402514,0.683544,-8.815789,-7.611111,-1.223684,0.222222,17.882990,1.770713,19.653703,4.719991,650.480224,655.200215,377604.635742,5231.415039
